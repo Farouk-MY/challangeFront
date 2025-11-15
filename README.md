@@ -4,10 +4,119 @@ A fully-featured, responsive e-commerce application built with React, TypeScript
 
 ## 🌟 Live Demo
 
-**Project URL**: https://lovable.dev/projects/fa3b7d06-eb21-4223-a346-b8e6b02f2c89
+**Project URL**: https://challange-front.vercel.app
+
+## 📸 Screenshots
+
+> **Note**: Add your screenshots to a `screenshots/` folder in the project root and reference them below.
+
+### 🏠 Homepage
+
+![Homepage Hero Section](screenshots/homepage-hero.png)
+*Hero carousel with promotional banners and smooth transitions between slides*
+
+---
+
+![Homepage Categories](screenshots/homepage-categories.png)
+*Category cards with hover effects and navigation to filtered product lists*
+
+---
+
+![Homepage Featured Products](screenshots/homepage-featured.png)
+*Featured products section with product cards, quick view, and add to cart functionality*
+
+---
+
+### 🛍️ Product Catalog
+
+![Product Catalog Grid](screenshots/catalog-grid.png)
+
+*Responsive product grid with cards showing product images, prices, ratings, and quick actions*
+
+*Advanced filtering sidebar with category selection, price range slider, and sorting options*
+
+*Real-time search functionality with instant results and product suggestions*
+
+*Product pagination controls for navigating through multiple pages*
+
+---
+
+### 📦 Product Detail Page
+
+![Product Detail Main View](screenshots/product-detail-main.png)
+
+*Product detail page with image gallery, title, price, rating, description, and add to cart button*
+
+*Multiple product images with thumbnail navigation and zoom functionality*
+
+*Customer reviews and ratings with user comments, dates, and helpful votes*
+
+*Quick view modal showing product details without leaving the current page*
+
+---
+
+### 🛒 Shopping Cart
+
+![Shopping Cart Full](screenshots/cart-full.png)
+*Shopping cart with item list, product images, quantities, individual prices, and total calculations*
+
+### 💳 Checkout Process
+
+![Checkout - Address Information](screenshots/checkout-step1-address.png)
+*First step of checkout: Address information form with validation*
+
+![Checkout - Delivery Method](screenshots/checkout-step2-delivery.png)
+*Second step: Delivery method selection with different shipping options*
+
+---
+
+![Checkout - Payment Information](screenshots/checkout-step3-payment.png)
+*Third step: Payment information form with card details and order summary*
+
+---
+
+![Order Confirmation Page](screenshots/order-confirmation.png)
+*Order confirmation page with order number, items, delivery details, and tracking information*
+
+---
+
+### 👤 User Authentication & Profile
+
+![Login Page](screenshots/login.png)
+*Login form with email and password fields, validation, and link to signup*
+
+---
+
+![Signup Page](screenshots/signup.png)
+*Registration form with name, email, password fields, and validation messages*
+
+---
+
+![User Profile - Personal Info](screenshots/profile-personal-info.png)
+*User profile page showing personal information and edit functionality*
+
+---
+
+![Order Details](screenshots/profile-order-details.png)
+*Detailed view of a specific order with items, prices, and delivery status*
+
+---
+
+### ❤️ Wishlist
+
+![Wishlist Page](screenshots/wishlist-full.png)
+*Wishlist page showing all saved favorite products with options to add to cart or remove*
+
+---
+
+![Wishlist Empty State](screenshots/wishlist-empty.png)
+*Empty wishlist page with call-to-action to browse products*
+
+---
 
 ## 📋 Table of Contents
 
+- [Screenshots](#-screenshots)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Architecture](#architecture)
@@ -385,9 +494,9 @@ export const store = configureStore({
    npm run preview
    ```
 
-### Development with Lovable
+### Development with Vercel
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/fa3b7d06-eb21-4223-a346-b8e6b02f2c89) and start prompting. Changes are automatically committed to the repository.
+Simply visit https://challange-front.vercel.app
 
 ## 📁 Project Structure
 
@@ -485,22 +594,68 @@ All components are fully responsive with mobile-first approach:
 
 ## 🚢 Deployment
 
-### Deploy with Lovable
+### Deploy to Vercel (Recommended)
 
-Simply open [Lovable](https://lovable.dev/projects/fa3b7d06-eb21-4223-a346-b8e6b02f2c89) and click Share → Publish.
+This project is optimized for Vercel deployment with proper routing and caching configurations.
 
-### Custom Domain
+#### Quick Deploy Steps
 
-Navigate to Project > Settings > Domains and click Connect Domain.
-Read more: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+1. **Push to GitHub** (if not already done):
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git remote add origin your-repo-url
+   git push -u origin main
+   ```
 
-## 📄 License
+2. **Deploy on Vercel**:
+   - Go to [vercel.com](https://vercel.com)
+   - Sign in with your GitHub account
+   - Click "New Project"
+   - Import your GitHub repository
+   - Vercel will auto-detect Vite configuration
+   - Click "Deploy"
 
-This project is built with Lovable and is available for educational purposes.
+#### Manual Configuration (if needed)
+
+If Vercel doesn't auto-detect settings, configure:
+- **Framework Preset**: Vite
+- **Build Command**: `npm run build`
+- **Output Directory**: `dist`
+- **Install Command**: `npm install`
+
+
+### Other Hosting Services
+
+The project can also be deployed to:
+
+- **Netlify**:
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+   - Add `_redirects` file for SPA routing
+
+- **GitHub Pages**:
+   - Requires additional base path configuration in vite.config.ts
+   - Use GitHub Actions for automated deployment
+
+- **Cloudflare Pages**:
+   - Build command: `npm run build`
+   - Build output directory: `dist`
+   - Framework preset: Vite
+
+### Configuration Files
+
+The project includes `vercel.json` for:
+- Client-side routing support (SPA fallback)
+- Security headers (X-Content-Type-Options, X-Frame-Options, X-XSS-Protection)
+- Asset caching optimization
+
+
 
 ## 🙏 Acknowledgments
 
 - **FakeStore API**: Product data
 - **shadcn/ui**: Component library
-- **Lovable**: Development platform
+- **Vercel**: Development platform
 - **Tailwind CSS**: Styling framework
